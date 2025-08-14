@@ -1,0 +1,143 @@
+.lexical-editor-wrapper {
+  position: relative;
+}
+
+.lexical-editor {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.lexical-toolbar {
+  display: flex;
+  gap: 2px;
+  padding: 8px;
+  background: #cbcccc;
+  border-bottom: 1px solid #ddd;
+}
+
+.toolbar-btn {
+  background: rgb(255, 255, 255);
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+}
+
+
+.toolbar-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.lexical-content-editable {
+  min-height: 120px;
+  padding: 12px;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background: white;
+}
+
+.lexical-content-editable:focus {
+  background: #fafafa;
+}
+
+.lexical-placeholder {
+  position: absolute;
+  top: 60px;
+  left: 12px;
+  color: #73818d;
+  font-size: 14px;
+  pointer-events: none;
+  user-select: none;
+}
+
+.lexical-paragraph {
+  margin: 0 0 8px 0;
+}
+
+.lexical-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.lexical-text-bold {
+  font-weight: bold;
+}
+
+.lexical-text-italic {
+  font-style: italic;
+}
+
+.lexical-text-underline {
+  text-decoration: underline;
+}
+
+.lexical-text-h1{
+    font-weight: bold;
+    font-size: 1.8em;
+}
+
+.lexical-text-h2{
+    font-weight: 700;
+    font-size: 1.4em;
+}
+
+.lexical-list-ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0 0 8px 0;
+}
+
+.lexical-list-ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin: 0 0 8px 0;
+}
+
+.lexical-list-item {
+  margin: 4px 0;
+}
+
+.lexical-content-editable strong,
+.lexical-content-editable b {
+  font-weight: bold;
+}
+
+.lexical-content-editable em,
+.lexical-content-editable i {
+  font-style: italic;
+}
+
+.lexical-content-editable u {
+  text-decoration: underline;
+}
+
+
+.lexical-editor:focus-within {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+
+@media (max-width: 768px) {
+  .lexical-toolbar {
+    flex-wrap: wrap;
+  }
+
+  .toolbar-btn {
+    flex: 1;
+    min-width: 40px;
+  }
+
+  .lexical-content-editable {
+    min-height: 100px;
+    font-size: 16px;
+  }
+}
