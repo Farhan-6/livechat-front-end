@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const axiosInstance = axios.create({
-    baseURL : "https://livechat-back-end.vercel.app/",
+    baseURL : "https://livechat-back-end.vercel.app",
     withCredentials: true,
 })
 
