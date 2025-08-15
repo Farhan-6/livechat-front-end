@@ -4,7 +4,7 @@ let socket = null;
 export const connectWebSocket = (userId, onMessage) => {
   if (socket || !userId) return;
 
-  socket = new WebSocket(`ws://livechat-back-end.vercel.app?userId=${userId}`);
+  socket = new WebSocket(`wss://livechat-back-end.vercel.app/?userId=${userId}`);
 
   socket.onopen = () => {
     console.log("WebSocket connected");
